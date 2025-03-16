@@ -15,7 +15,7 @@ TEST(lTest, CodeandDate) {
 
 TEST(lTest, wonTowolf) {
     set<string> word_list;
-    load_words(word_list, "words.txt"); 
+    load_words(word_list, "src/words.txt"); 
     auto ladder = generate_word_ladder("won", "wolf", word_list);
     ASSERT_FALSE(ladder.empty()) << "No path found from won to wolf";
     EXPECT_EQ(ladder.front(), "won");

@@ -7,7 +7,7 @@ using namespace std;
 
 int main() {
     set<string> word_l; string startW; string goalword;
-    load_words(word_l, "words.txt");
+    load_words(word_l, "src/words.txt");
     cout << "Inpute word 1: ";
     getline(cin, startW);
     cout << "Inpute word last: ";
@@ -19,9 +19,10 @@ int main() {
         cout << "There is a error b/c " << startW << " and " << goalword << " is same" << endl;
         return 0;}
     if (stepchain.empty()) {
-        cout << "Noting found" << endl;
-    } else {
-        print_word_ladder(stepchain);}
+    cout << "No word ladder found.\n";}  else {
+    print_word_ladder(stepchain);
+}
+
     verify_word_ladder();
     return 0;
 }

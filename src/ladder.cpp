@@ -27,7 +27,6 @@ bool check_unequal_size(const string& shorter_str, const string& longer_str) {
 
 bool edit_distance_within(const string& a, const string& b, int d) {
     if (abs(static_cast<int>(a.size()) - static_cast<int>(b.size())) > d) return false;
-    if (a == b) return false;
     if (a.size() == b.size()) return check_equal_size(a, b);
     const string& shorter_str = (a.size() < b.size()) ? a : b; const string& longer_str = (a.size() < b.size()) ? b : a;
     return check_unequal_size(shorter_str, longer_str);
@@ -59,7 +58,7 @@ vector<string> generate_word_ladder(const string& begin_word, const string& end_
     return result.empty() ? vector<string>() : result;}
 
 void load_words(set<string> &word_list, const string& file_name) {
-    ifstream inpFile("src/" + file_name);
+    ifstream inpFile(file_name);
     if (!inpFile) { cerr << "There is a error: " << file_name << endl; return; }
     string word_read;
     while (inpFile >> word_read) { for (auto &ch : word_read) ch = tolower((unsigned char)ch); word_list.insert(word_read); }

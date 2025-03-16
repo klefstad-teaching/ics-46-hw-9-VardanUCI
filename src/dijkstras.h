@@ -39,7 +39,7 @@ inline istream& operator>>(istream& in, Graph& G) {
 }
 
 inline void file_to_graph(const string& filename, Graph& G) {
-    ifstream in("src/" + filename);
+    ifstream in(filename);
     if (!in) {
         throw runtime_error("Can't open input file");
     }
