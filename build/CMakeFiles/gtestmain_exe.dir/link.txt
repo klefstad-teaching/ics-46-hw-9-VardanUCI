@@ -1,0 +1,1 @@
+/usr/bin/c++ -fsanitize=address,undefined CMakeFiles/gtestmain_exe.dir/gtest/gtestmain.cpp.o -o gtestmain_exe  -lpthread /usr/lib/x86_64-linux-gnu/libgtest_main.a /usr/lib/x86_64-linux-gnu/libgtest.a 

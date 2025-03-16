@@ -39,7 +39,7 @@ inline istream& operator>>(istream& in, Graph& G) {
 }
 
 inline void file_to_graph(const string& filename, Graph& G) {
-    ifstream in(filename);
+    ifstream in("src/" + filename);
     if (!in) {
         throw runtime_error("Can't open input file");
     }
@@ -50,3 +50,7 @@ inline void file_to_graph(const string& filename, Graph& G) {
 vector<int> dijkstra_shortest_path(const Graph& G, int source, vector<int>& previous);
 vector<int> extract_shortest_path(const vector<int>& /*distances*/, const vector<int>& previous, int destination);
 void print_path(const vector<int>& v, int total);
+void update_neighbor(const Graph& G, int currnode, int neighbor, int linkcost, vector<int>& distance, vector<int>& previous, priority_queue<pair<int,int>, vector<pair<int,int>>, greater<pair<int,int>>>& nodeheap);
+void process_node(const Graph& G, vector<bool>& seenflags, vector<int>& distance, vector<int>& previous, priority_queue<pair<int,int>, vector<pair<int,int>>, greater<pair<int,int>>>& nodeheap);
+
+

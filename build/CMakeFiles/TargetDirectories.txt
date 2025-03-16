@@ -1,0 +1,5 @@
+/home/vardank/ICS46/ics-46-hw-9-VardanUCI/build/CMakeFiles/dijkstra_main.dir
+/home/vardank/ICS46/ics-46-hw-9-VardanUCI/build/CMakeFiles/ladder_main.dir
+/home/vardank/ICS46/ics-46-hw-9-VardanUCI/build/CMakeFiles/student_gtests.dir
+/home/vardank/ICS46/ics-46-hw-9-VardanUCI/build/CMakeFiles/edit_cache.dir
+/home/vardank/ICS46/ics-46-hw-9-VardanUCI/build/CMakeFiles/rebuild_cache.dir
